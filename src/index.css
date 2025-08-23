@@ -2,95 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* CLAIRIS AI Ecosystem Design System
+   Monochromatic theme with aurora effects and AI gradient showcases
+   All colors MUST be HSL for consistency
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 95%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 95%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* CLAIRIS Aurora Colors */
+    --aurora-primary: 220 100% 60%;
+    --aurora-secondary: 280 100% 70%;
+    --aurora-accent: 180 100% 50%;
+    --aurora-glow: 320 100% 60%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* AI Gradient Colors */
+    --ai-engineering: 210 100% 55%;
+    --ai-medical: 120 70% 55%;
+    --ai-language: 45 100% 60%;
+    --ai-processor: 280 100% 65%;
+    --ai-general: 340 100% 60%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Design System Gradients */
+    --gradient-aurora: linear-gradient(135deg, 
+      hsl(var(--aurora-primary) / 0.8) 0%, 
+      hsl(var(--aurora-secondary) / 0.6) 25%,
+      hsl(var(--aurora-accent) / 0.4) 50%,
+      hsl(var(--aurora-glow) / 0.6) 75%,
+      hsl(var(--aurora-primary) / 0.8) 100%);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --gradient-ai-engineering: linear-gradient(135deg, 
+      hsl(var(--ai-engineering) / 0.9) 0%, 
+      hsl(var(--aurora-primary) / 0.7) 100%);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --gradient-ai-medical: linear-gradient(135deg, 
+      hsl(var(--ai-medical) / 0.9) 0%, 
+      hsl(var(--aurora-accent) / 0.7) 100%);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --gradient-ai-language: linear-gradient(135deg, 
+      hsl(var(--ai-language) / 0.9) 0%, 
+      hsl(var(--aurora-glow) / 0.7) 100%);
 
-    --sidebar-border: 220 13% 91%;
+    --gradient-ai-processor: linear-gradient(135deg, 
+      hsl(var(--ai-processor) / 0.9) 0%, 
+      hsl(var(--aurora-secondary) / 0.7) 100%);
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Shadows with aurora glow */
+    --shadow-aurora: 0 0 50px hsl(var(--aurora-primary) / 0.3);
+    --shadow-ai-glow: 0 0 30px hsl(var(--aurora-secondary) / 0.2);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.8);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-aurora: all 3s ease-in-out infinite;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 5%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 5%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 90%;
+    --accent-foreground: 0 0% 5%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 88%;
+    --input: 0 0% 94%;
+    --ring: 0 0% 5%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Light mode aurora adjustments */
+    --shadow-aurora: 0 0 50px hsl(var(--aurora-primary) / 0.2);
+    --shadow-ai-glow: 0 0 30px hsl(var(--aurora-secondary) / 0.15);
+    --shadow-card: 0 10px 40px -10px hsl(0 0% 0% / 0.1);
   }
 }
 
@@ -100,6 +125,93 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rajdhani;
+  }
+
+  /* Aurora Background Animation */
+  .aurora-bg {
+    background: var(--gradient-aurora);
+    background-size: 300% 300%;
+    animation: aurora-flow 8s ease-in-out infinite;
+  }
+
+  /* AI Gradient Animations */
+  .ai-gradient-engineering {
+    background: var(--gradient-ai-engineering);
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease-in-out infinite;
+  }
+
+  .ai-gradient-medical {
+    background: var(--gradient-ai-medical);
+    background-size: 200% 200%;
+    animation: gradient-shift 7s ease-in-out infinite reverse;
+  }
+
+  .ai-gradient-language {
+    background: var(--gradient-ai-language);
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease-in-out infinite;
+  }
+
+  .ai-gradient-processor {
+    background: var(--gradient-ai-processor);
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease-in-out infinite reverse;
+  }
+
+  /* Aurora floating particles */
+  .aurora-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(var(--aurora-primary) / 0.8) 0%, transparent 70%);
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .aurora-particle:nth-child(2) {
+    background: radial-gradient(circle, hsl(var(--aurora-secondary) / 0.6) 0%, transparent 70%);
+    animation-delay: -5s;
+    animation-duration: 12s;
+  }
+
+  .aurora-particle:nth-child(3) {
+    background: radial-gradient(circle, hsl(var(--aurora-accent) / 0.7) 0%, transparent 70%);
+    animation-delay: -10s;
+    animation-duration: 18s;
+  }
+}
+
+@keyframes aurora-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.7;
+  }
+  33% {
+    transform: translateY(-30px) translateX(20px) scale(1.1);
+    opacity: 1;
+  }
+  66% {
+    transform: translateY(10px) translateX(-15px) scale(0.9);
+    opacity: 0.8;
   }
 }

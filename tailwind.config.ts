@@ -52,16 +52,34 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+				aurora: {
+					primary: 'hsl(var(--aurora-primary))',
+					secondary: 'hsl(var(--aurora-secondary))',
+					accent: 'hsl(var(--aurora-accent))',
+					glow: 'hsl(var(--aurora-glow))'
+				},
+				ai: {
+					engineering: 'hsl(var(--ai-engineering))',
+					medical: 'hsl(var(--ai-medical))',
+					language: 'hsl(var(--ai-language))',
+					processor: 'hsl(var(--ai-processor))',
+					general: 'hsl(var(--ai-general))'
 				}
+			},
+			fontFamily: {
+				rajdhani: ['Rajdhani', 'sans-serif'],
+			},
+			backgroundImage: {
+				'aurora-gradient': 'var(--gradient-aurora)',
+				'ai-engineering': 'var(--gradient-ai-engineering)',
+				'ai-medical': 'var(--gradient-ai-medical)',
+				'ai-language': 'var(--gradient-ai-language)',
+				'ai-processor': 'var(--gradient-ai-processor)',
+			},
+			boxShadow: {
+				'aurora': 'var(--shadow-aurora)',
+				'ai-glow': 'var(--shadow-ai-glow)',
+				'card-dark': 'var(--shadow-card)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -88,7 +106,10 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'aurora-flow': 'aurora-flow 8s ease-in-out infinite',
+				'gradient-shift': 'gradient-shift 6s ease-in-out infinite',
+				'float': 'float 15s ease-in-out infinite',
 			}
 		}
 	},
