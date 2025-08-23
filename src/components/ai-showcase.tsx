@@ -88,10 +88,12 @@ export function AIShowcase() {
             return (
               <Card 
                 key={solution.id}
-                className="relative group bg-card/50 backdrop-blur-md border-border/30 hover:border-border/50 transition-all duration-500 overflow-hidden"
+                className="relative group border-border/30 hover:border-border/50 transition-all duration-500 overflow-hidden"
               >
-                {/* Animated Background Gradient */}
-                <div className={`absolute inset-0 ${solution.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500`}></div>
+                {/* Gradient Background */}
+                <div className={`absolute inset-0 ${solution.gradient} opacity-60 group-hover:opacity-80 transition-all duration-500`}></div>
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-background/20 backdrop-blur-sm"></div>
                 
                 <CardContent className="relative p-8">
                   {/* Status Badge */}
