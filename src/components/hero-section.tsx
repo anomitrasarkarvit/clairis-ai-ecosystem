@@ -31,7 +31,7 @@ export function HeroSection() {
           </p>
 
           {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button 
               size="lg"
               className="px-8 py-4 text-lg font-medium bg-aurora-primary hover:bg-aurora-primary/90 text-primary-foreground shadow-aurora group"
@@ -48,6 +48,29 @@ export function HeroSection() {
             >
               Explore AI Universe
             </Button>
+          </div>
+
+          {/* Chat with CLAIRIS Bar */}
+          <div className="mb-16">
+            <div className="max-w-md mx-auto">
+              <Button 
+                asChild
+                variant="outline"
+                className="w-full px-6 py-4 text-base font-medium bg-card/5 backdrop-blur-md border-aurora-primary/30 hover:bg-aurora-primary/10 hover:border-aurora-primary/50 transition-all duration-300 group"
+              >
+                <a href="/chat">
+                  <div className="flex items-center justify-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-aurora-primary/20 flex items-center justify-center group-hover:bg-aurora-primary/30 transition-colors">
+                      <span className="text-sm font-bold text-aurora-primary">C</span>
+                    </div>
+                    <span className="text-foreground/90 group-hover:text-foreground">
+                      Chat with CLAIRIS
+                    </span>
+                    <div className="w-2 h-2 rounded-full bg-aurora-primary animate-pulse ml-auto"></div>
+                  </div>
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Scroll Indicator */}
