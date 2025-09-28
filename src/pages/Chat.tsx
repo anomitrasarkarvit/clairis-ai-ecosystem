@@ -5,6 +5,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowLeft, Send, Bot, User, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface Message {
   id: string;
@@ -18,6 +20,8 @@ interface OllamaModel {
   modified_at: string;
   size: number;
 }
+
+const SYSTEM_PROMPT = "You are CLAIRIS, an advanced AI assistant. Please respond in markdown format using appropriate formatting like headings, lists, code blocks, and emphasis when helpful. Keep your responses clear and well-structured.";
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -67,6 +71,13 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
+      // Build conversation context with system prompt
+      const conversationHistory = messages.map(msg => 
+        `${msg.role === 'user' ? 'User' : 'Assistant'}: ${msg.content}`
+      ).join('\n\n');
+      
+      const fullPrompt = `${SYSTEM_PROMPT}\n\nConversation history:\n${conversationHistory}\n\nUser: ${input.trim()}\n\nAssistant:`;
+
       const response = await fetch('http://localhost:11434/api/generate', {
         method: 'POST',
         headers: {
@@ -74,7 +85,7 @@ export default function Chat() {
         },
         body: JSON.stringify({
           model: selectedModel,
-          prompt: input.trim(),
+          prompt: fullPrompt,
           stream: true
         })
       });
@@ -208,9 +219,17 @@ export default function Chat() {
                       : 'bg-card/50 border border-border/50'
                   }`}
                 >
-                  <p className="whitespace-pre-wrap leading-relaxed">
-                    {message.content}
-                  </p>
+                  {message.role === 'assistant' ? (
+                    <div className="prose prose-sm max-w-none dark:prose-invert prose-headings:font-rajdhani prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-code:text-foreground prose-pre:bg-muted prose-pre:text-foreground">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {message.content}
+                      </ReactMarkdown>
+                    </div>
+                  ) : (
+                    <p className="whitespace-pre-wrap leading-relaxed">
+                      {message.content}
+                    </p>
+                  )}
                 </div>
                 
                 {message.role === 'user' && (
