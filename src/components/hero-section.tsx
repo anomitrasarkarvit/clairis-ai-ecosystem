@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button"
 import { AuroraBackground } from "@/components/aurora-background"
 import { ChevronDown, Sparkles, Zap } from "lucide-react"
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onChatOpen: () => void;
+}
+
+export function HeroSection({ onChatOpen }: HeroSectionProps) {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <AuroraBackground />
@@ -54,21 +58,19 @@ export function HeroSection() {
           <div className="mb-16">
             <div className="max-w-md mx-auto">
               <Button 
-                asChild
                 variant="outline"
                 className="w-full px-6 py-4 text-base font-medium bg-card/5 backdrop-blur-md border-aurora-primary/30 hover:bg-aurora-primary/10 hover:border-aurora-primary/50 transition-all duration-300 group"
+                onClick={onChatOpen}
               >
-                <a href="/chat">
-                  <div className="flex items-center justify-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-aurora-primary/20 flex items-center justify-center group-hover:bg-aurora-primary/30 transition-colors">
-                      <span className="text-sm font-bold text-aurora-primary">C</span>
-                    </div>
-                    <span className="text-foreground/90 group-hover:text-foreground">
-                      Chat with CLAIRIS
-                    </span>
-                    <div className="w-2 h-2 rounded-full bg-aurora-primary animate-pulse ml-auto"></div>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-aurora-primary/20 flex items-center justify-center group-hover:bg-aurora-primary/30 transition-colors">
+                    <span className="text-sm font-bold text-aurora-primary">C</span>
                   </div>
-                </a>
+                  <span className="text-foreground/90 group-hover:text-foreground">
+                    Chat with CLAIRIS
+                  </span>
+                  <div className="w-2 h-2 rounded-full bg-aurora-primary animate-pulse ml-auto"></div>
+                </div>
               </Button>
             </div>
           </div>
