@@ -34,7 +34,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedModel, setSelectedModel] = useState<string>("");
   const [availableModels, setAvailableModels] = useState<OllamaModel[]>([]);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Fetch available models on component mount
@@ -46,9 +46,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-    }
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const fetchAvailableModels = async () => {
@@ -192,7 +190,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
 
         {/* Chat Messages */}
         <div className="flex-1 flex flex-col overflow-hidden">
-          <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
+          <ScrollArea className="flex-1 p-4">
             <div className="max-w-4xl mx-auto space-y-6">
               {messages.length === 0 && (
                 <div className="text-center py-12">
@@ -259,6 +257,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
                   </div>
                 </div>
               )}
+              <div ref={messagesEndRef} />
             </div>
           </ScrollArea>
 
