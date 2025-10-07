@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+// import ClairisIcon  from "clairis-img"
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -178,7 +179,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
         <DrawerHeader className="border-b border-border/50 bg-card/5 backdrop-blur-md">
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-2">
-              <img src="/clairis-image.png" alt="CLAIRIS" className="w-6 h-6" />
+              <img src="/clairis-img.png" alt="CLAIRIS" className="w-6 h-6" />
               <DrawerTitle className="text-xl font-bold font-rajdhani">
                 CLAIRIS Chat
               </DrawerTitle>
@@ -215,7 +216,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
             <div className="max-w-4xl mx-auto space-y-6">
               {messages.length === 0 && (
                 <div className="text-center py-12">
-                  <img src="/clairis-image.png" alt="CLAIRIS" className="w-12 h-12 mx-auto mb-4" />
+                  <img src="/clairis-img.png" alt="CLAIRIS" className="w-12 h-12 mx-auto mb-4" />
                   <h2 className="text-xl font-semibold mb-2">
                     Welcome to CLAIRIS
                   </h2>
@@ -235,7 +236,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
                 >
                   {message.role === "assistant" && (
                     <div className="w-8 h-8 rounded-full bg-aurora-primary/10 flex items-center justify-center flex-shrink-0">
-                      <img src="/clairis-image.png" alt="CLAIRIS" className="w-4 h-4" />
+                      <img src="/clairis-img.png" alt="CLAIRIS" className="w-4 h-4" />
                     </div>
                   )}
 
@@ -270,7 +271,7 @@ export function ChatDrawer({ open, onOpenChange }: ChatDrawerProps) {
               {isLoading && (
                 <div className="flex gap-4 justify-start">
                   <div className="w-8 h-8 rounded-full bg-aurora-primary/10 flex items-center justify-center flex-shrink-0">
-                    <img src="/clairis-image.png" alt="CLAIRIS" className="w-4 h-4 animate-pulse" />
+                    <img src="" alt="CLAIRIS" className="w-4 h-4 animate-pulse" />
                   </div>
                   <div className="bg-card/50 border border-border/50 rounded-2xl px-4 py-3">
                     <div className="flex gap-1">
