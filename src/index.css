@@ -139,25 +139,25 @@
   .ai-gradient-engineering {
     background: var(--gradient-ai-engineering);
     background-size: 200% 200%;
-    animation: gradient-shift 15s ease-in-out infinite;
+    animation: gradient-shift 30s ease-in-out infinite;
   }
 
   .ai-gradient-medical {
     background: var(--gradient-ai-medical);
     background-size: 200% 200%;
-    animation: gradient-shift 18s ease-in-out infinite reverse;
+    animation: gradient-shift 35s ease-in-out infinite reverse;
   }
 
   .ai-gradient-language {
     background: var(--gradient-ai-language);
     background-size: 200% 200%;
-    animation: gradient-shift 16s ease-in-out infinite;
+    animation: gradient-shift 32s ease-in-out infinite;
   }
 
   .ai-gradient-processor {
     background: var(--gradient-ai-processor);
     background-size: 200% 200%;
-    animation: gradient-shift 20s ease-in-out infinite reverse;
+    animation: gradient-shift 38s ease-in-out infinite reverse;
   }
 
   /* Aurora Line Animations */
