@@ -160,6 +160,23 @@
     animation: gradient-shift 38s ease-in-out infinite reverse;
   }
 
+  /* Static AI Gradients for Cards (No Animation) */
+  .ai-gradient-engineering-static {
+    background: var(--gradient-ai-engineering);
+  }
+
+  .ai-gradient-medical-static {
+    background: var(--gradient-ai-medical);
+  }
+
+  .ai-gradient-language-static {
+    background: var(--gradient-ai-language);
+  }
+
+  .ai-gradient-processor-static {
+    background: var(--gradient-ai-processor);
+  }
+
   /* Aurora Line Animations */
   .aurora-line-flow {
     animation: line-flow 8s linear infinite;

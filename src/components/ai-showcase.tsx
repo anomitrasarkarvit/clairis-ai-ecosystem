@@ -17,7 +17,7 @@ const aiSolutions = [
     title: "3D Engineering AI",
     description: "Advanced CAD modeling, structural analysis, and automated design optimization with machine learning.",
     icon: Wrench,
-    gradient: "ai-gradient-engineering",
+    gradient: "ai-gradient-engineering-static",
     status: "In Development"
   },
   {
@@ -25,7 +25,7 @@ const aiSolutions = [
     title: "Medical Assistant AI",
     description: "Diagnostic support, treatment recommendations, and patient care optimization with medical precision.",
     icon: Heart,
-    gradient: "ai-gradient-medical",
+    gradient: "ai-gradient-medical-static",
     status: "Beta Testing"
   },
   {
@@ -33,7 +33,7 @@ const aiSolutions = [
     title: "Language Tutorials AI",
     description: "Personalized language learning with adaptive curricula and real-time conversation practice.",
     icon: Languages,
-    gradient: "ai-gradient-language",
+    gradient: "ai-gradient-language-static",
     status: "Alpha"
   },
   {
@@ -41,7 +41,7 @@ const aiSolutions = [
     title: "Processor Orchestration",
     description: "Intelligent resource management and distributed computing optimization across cloud infrastructure.",
     icon: Cpu,
-    gradient: "ai-gradient-processor",
+    gradient: "ai-gradient-processor-static",
     status: "Research"
   },
   {
@@ -49,7 +49,7 @@ const aiSolutions = [
     title: "General AI Solutions",
     description: "Custom AI implementations for business automation, data analysis, and decision support systems.",
     icon: Brain,
-    gradient: "ai-gradient-engineering",
+    gradient: "ai-gradient-engineering-static",
     status: "Coming Soon"
   },
   {
@@ -57,7 +57,7 @@ const aiSolutions = [
     title: "Neural Networks",
     description: "Deep learning models for pattern recognition, predictive analytics, and intelligent automation.",
     icon: Bot,
-    gradient: "ai-gradient-medical",
+    gradient: "ai-gradient-medical-static",
     status: "In Development"
   }
 ]
