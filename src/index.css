@@ -132,32 +132,32 @@
   .aurora-bg {
     background: var(--gradient-aurora);
     background-size: 300% 300%;
-    animation: aurora-flow 8s ease-in-out infinite;
+    animation: aurora-flow 20s ease-in-out infinite;
   }
 
   /* AI Gradient Animations */
   .ai-gradient-engineering {
     background: var(--gradient-ai-engineering);
     background-size: 200% 200%;
-    animation: gradient-shift 6s ease-in-out infinite;
+    animation: gradient-shift 15s ease-in-out infinite;
   }
 
   .ai-gradient-medical {
     background: var(--gradient-ai-medical);
     background-size: 200% 200%;
-    animation: gradient-shift 7s ease-in-out infinite reverse;
+    animation: gradient-shift 18s ease-in-out infinite reverse;
   }
 
   .ai-gradient-language {
     background: var(--gradient-ai-language);
     background-size: 200% 200%;
-    animation: gradient-shift 5s ease-in-out infinite;
+    animation: gradient-shift 16s ease-in-out infinite;
   }
 
   .ai-gradient-processor {
     background: var(--gradient-ai-processor);
     background-size: 200% 200%;
-    animation: gradient-shift 8s ease-in-out infinite reverse;
+    animation: gradient-shift 20s ease-in-out infinite reverse;
   }
 
   /* Aurora Line Animations */
