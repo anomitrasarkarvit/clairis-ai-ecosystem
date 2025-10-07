@@ -1,5 +1,5 @@
-import { Separator } from "@/components/ui/separator"
-import { Brain, Github, Twitter, Linkedin } from "lucide-react"
+import { Separator } from "@/components/ui/separator";
+import { Brain, Github, Twitter, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -13,7 +13,8 @@ export function Footer() {
               <span className="text-xl font-bold font-rajdhani">CLAIRIS</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Next-generation AI ecosystem transforming industries with intelligent solutions.
+              Next-generation AI ecosystem transforming industries with
+              intelligent solutions.
             </p>
           </div>
 
@@ -53,16 +54,20 @@ export function Footer() {
         <Separator className="bg-border/30" />
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 text-sm text-muted-foreground">
-          <div>
-            © 2024 CLAIRIS. All rights reserved.
-          </div>
+          <div>CLARIS by DEZORS © 2025 DEZORS. All rights reserved.</div>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <span className="hover:text-foreground cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-foreground cursor-pointer transition-colors">Terms of Service</span>
-            <span className="hover:text-foreground cursor-pointer transition-colors">Cookie Policy</span>
+            <span className="hover:text-foreground cursor-pointer transition-colors">
+              Privacy Policy
+            </span>
+            <span className="hover:text-foreground cursor-pointer transition-colors">
+              Terms of Service
+            </span>
+            <span className="hover:text-foreground cursor-pointer transition-colors">
+              Cookie Policy
+            </span>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
